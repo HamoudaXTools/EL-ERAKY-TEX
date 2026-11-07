@@ -12,12 +12,97 @@
 [dir="ltr"] .hero-copy{padding-left:7%;padding-right:6%}[dir="ltr"] .hero-photo{padding:34px 34px 34px 0}[dir="ltr"] .hero-photo img{border-radius:0 20px 20px 0}[dir="ltr"] .photo-label{right:auto;left:25px}[dir="ltr"] .ticks span:before{margin-left:0;margin-right:9px}
 @media(max-width:850px){.links{display:none}.nav{height:75px}.hero{grid-template-columns:1fr;min-height:unset}.hero-copy{padding:48px 8% 35px}.hero-photo{min-height:330px;padding:0 20px 20px}.hero-photo img{border-radius:17px}.photo-label{bottom:40px;right:35px}.trust{grid-template-columns:1fr;margin-bottom:55px}.cards{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr;gap:30px}.about img{max-height:340px}.contact-inner{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.brand img{width:58px}.brand strong{font-size:16px}.brand small{font-size:8px}.nav-actions .cta{display:none}.hero{border-radius:18px}.hero-copy{padding:38px 23px 28px}.hero-copy p{font-size:14px}.hero-photo{min-height:260px;padding:0 12px 12px}.photo-label{right:22px;bottom:28px}.cards{grid-template-columns:1fr}.card img{height:215px}.section{padding-bottom:55px}.about{padding:52px 0}.ticks{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:170px 170px}.gallery img:first-child{grid-row:span 2}.footer-inner{align-items:flex-start;flex-direction:column}.contact{padding:40px 0}.contact h2{font-size:25px}}
-</style></head>
+
+/* ===== EL-ERAKY TEX NEON REDESIGN ===== */
+:root{
+ --green:#00f5ff;--deep:#08091d;--leaf:#ff24d2;--gold:#a5ff00;
+ --ink:#f4f5ff;--muted:#b9c1df;--cream:#08091d;--white:#11152c;
+ --line:#30365c;--shadow:0 0 28px #00eaff22
+}
+html{scroll-behavior:smooth}
+body{
+ background:
+  radial-gradient(ellipse at 12% 12%,#24104a 0,transparent 34%),
+  radial-gradient(ellipse at 88% 28%,#071f49 0,transparent 38%),
+  #08091d;color:#f5f6ff
+}
+.topline{background:linear-gradient(90deg,#00f5ff,#ff24d2,#a5ff00,#00f5ff);box-shadow:0 0 18px #00eaff99}
+.nav{color:#fff}
+.brand strong,.section h2,.card h3,.about-copy h2{color:#00f5ff;text-shadow:0 0 14px #00eaff55}
+.brand small{color:#ff68df}
+.links{color:#d8dcf6}
+.links a:hover{color:#00f5ff;text-shadow:0 0 12px #00f5ff}
+.lang{background:#11152c;border-color:#00eaff66;color:#00f5ff}
+.cta{background:linear-gradient(100deg,#00a9ff,#a900ff,#ff20c9);box-shadow:0 0 18px #00dfff66;color:#fff}
+.cta:hover{background:linear-gradient(100deg,#ff20c9,#00a9ff);box-shadow:0 0 26px #ff20c988}
+.hero.neon-hero{
+ display:block;position:relative;width:100%;min-height:0;aspect-ratio:1672/941;
+ overflow:hidden;border:1px solid #00eaff99;border-radius:24px;
+ background:#08091d;box-shadow:0 0 35px #00eaff33,0 0 70px #f000ff20
+}
+.hero.neon-hero:before{display:none}
+.neon-banner{display:block;width:100%;height:100%;object-fit:cover}
+.neon-hero-actions{
+ position:absolute;left:50%;bottom:4.2%;transform:translateX(-50%);
+ display:flex;gap:12px;flex-wrap:wrap;justify-content:center;width:90%
+}
+.neon-action{
+ border:1px solid #00f5ff;color:#fff;background:#07172cdd;
+ border-radius:30px;padding:10px 20px;font-weight:900;
+ box-shadow:0 0 15px #00eaff77;text-shadow:0 0 8px #00eaff;
+ backdrop-filter:blur(8px)
+}
+.neon-action.secondary{border-color:#ff24d2;box-shadow:0 0 15px #ff24d277;text-shadow:0 0 8px #ff24d2}
+.trust div,.card{
+ background:linear-gradient(145deg,#151a35,#0d1027);
+ border:1px solid #343c70;box-shadow:0 0 18px #00dfff12
+}
+.symbol{background:#161b3c;color:#00f5ff;border:1px solid #00eaff66;box-shadow:0 0 14px #00eaff33}
+.trust b,.ticks span{color:#eafcff}
+.trust span,.section-head p,.card p,.about-copy p{color:#b8c1df}
+.kicker{color:#ff4bd8;text-shadow:0 0 12px #ff24d288}
+.section h2{color:#f5f7ff;text-shadow:0 0 15px #00eaff66}
+.card{transition:.25s}
+.card:hover{border-color:#ff24d2;box-shadow:0 0 24px #ff24d255,0 0 40px #00eaff22}
+.card h3{color:#00f5ff}
+.about{background:linear-gradient(130deg,#11152e,#211039);border-top:1px solid #00eaff44;border-bottom:1px solid #ff24d244}
+.about-copy h2{color:#fff}
+.about img,.gallery img{border:1px solid #00eaff66;box-shadow:0 0 20px #00dfff22}
+.contact{
+ background:radial-gradient(ellipse at 10% 20%,#42105a,#10152f 55%,#071a35);
+ border:1px solid #ff24d288;box-shadow:0 0 28px #ff24d233
+}
+.contact h2{color:#fff;text-shadow:0 0 14px #00eaff66}
+.contact p{color:#c8d1ee}
+.footer{background:#050615;border-top:1px solid #00eaff55}
+.footer strong{color:#00f5ff}
+.social{color:#ff54dd}
+@media(max-width:850px){
+ .hero.neon-hero{aspect-ratio:1672/941}
+ .neon-hero-actions{bottom:3%;gap:7px}
+ .neon-action{padding:8px 13px;font-size:12px}
+}
+@media(max-width:560px){
+ .hero.neon-hero{border-radius:16px;aspect-ratio:4/5}
+ .neon-banner{object-fit:cover;object-position:center}
+ .neon-hero-actions{bottom:3%;width:96%}
+ .neon-action{font-size:11px;padding:7px 11px}
+}
+
+</style><link rel="preload" as="image" href="assets/neon-hero.jpg">
+</head>
 <body><div class="topline"></div>
 <header class="wrap nav"><a class="brand" href="#home"><img src="assets/el-eraky-logo.jpg" alt="EL ERAKY TEX logo"><span><strong data-ar="مصبغة العراقي" data-en="EL-ERAKY TEX">مصبغة العراقي</strong><small>EL-ERAKY TEX</small></span></a>
 <nav class="links"><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a><a href="#about" data-ar="عن الشركة" data-en="About">عن الشركة</a><a href="#gallery" data-ar="معرض الصور" data-en="Gallery">معرض الصور</a><a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></nav>
 <div class="nav-actions"><button class="lang" id="langBtn">English</button><a class="cta" href="#contact" data-ar="اطلب عرض سعر ←" data-en="Request a quote →">اطلب عرض سعر ←</a></div></header>
-<main class="wrap" id="home"><section class="hero"><div class="hero-copy"><span class="eyebrow" data-ar="خبرة في عالم الخيوط والمنسوجات" data-en="Expertise in yarn & textiles">خبرة في عالم الخيوط والمنسوجات</span><h1 data-ar="مصبغة العراقي<br><span>EL-ERAKY TEX</span>" data-en="EL-ERAKY TEX<br><span>YARN & TEXTILE</span>">مصبغة العراقي<br><span>EL-ERAKY TEX</span></h1><p data-ar="تجارة وصباغة خيوط البوليستر وصناعة الشانيليا. ألوان متنوعة، عناية بالتفاصيل، وحلول تخدم احتياجات صناعة النسيج." data-en="Polyester yarn trading and dyeing, alongside chenille yarn manufacturing. A wide range of colors, attention to detail, and solutions for textile production.">تجارة وصباغة خيوط البوليستر وصناعة الشانيليا. ألوان متنوعة، عناية بالتفاصيل، وحلول تخدم احتياجات صناعة النسيج.</p><div class="hero-buttons"><a class="cta light" href="#services" data-ar="اكتشف خدماتنا" data-en="Explore our services">اكتشف خدماتنا</a><a class="outline" href="#contact" data-ar="تواصل معنا" data-en="Contact us">تواصل معنا</a></div></div><div class="hero-photo"><img src="assets/polyester-cones.jpg" alt="بكرات خيوط بوليستر ملونة"><div class="photo-label"><span data-ar="ألوان تصنع الفرق" data-en="Colors that make a difference">ألوان تصنع الفرق</span><small data-ar="خيوط بوليستر بجودة واهتمام" data-en="Polyester yarn with care">خيوط بوليستر بجودة واهتمام</small></div></div></section>
+<main class="wrap" id="home"><section class="hero neon-hero" aria-label="مصبغة العراقي EL-ERAKY TEX">
+  <img class="neon-banner" src="assets/neon-hero.jpg"
+       alt="مصبغة العراقي EL-ERAKY TEX لتجارة وصباغة خيوط البوليستر وصناعة الشانيليا">
+  <div class="neon-hero-actions">
+    <a class="neon-action" href="#services" data-ar="اكتشف خدماتنا" data-en="Explore our services">اكتشف خدماتنا</a>
+    <a class="neon-action secondary" href="#contact" data-ar="اطلب عرض سعر" data-en="Request a quote">اطلب عرض سعر</a>
+  </div>
+</section>
 <div class="trust"><div><i class="symbol">✦</i><div><b data-ar="تجارة خيوط البوليستر" data-en="Polyester yarn trading">تجارة خيوط البوليستر</b><span data-ar="خامات تلائم احتياجاتك" data-en="Materials for your needs">خامات تلائم احتياجاتك</span></div></div><div><i class="symbol">◉</i><div><b data-ar="صباغة الخيوط" data-en="Yarn dyeing">صباغة الخيوط</b><span data-ar="تنوع في الألوان" data-en="A variety of colors">تنوع في الألوان</span></div></div><div><i class="symbol">❋</i><div><b data-ar="صناعة الشانيليا" data-en="Chenille manufacturing">صناعة الشانيليا</b><span data-ar="حلول لصناعة النسيج" data-en="Textile solutions">حلول لصناعة النسيج</span></div></div></div>
 <section class="section" id="services"><div class="section-head"><span class="kicker" data-ar="ماذا نقدم" data-en="WHAT WE DO">ماذا نقدم</span><h2 data-ar="خدماتنا ومنتجاتنا" data-en="Our Services & Products">خدماتنا ومنتجاتنا</h2><p data-ar="نعمل في مجالات الخيوط والصباغة والتصنيع، ونوفر خيارات متنوعة تناسب استخدامات صناعة المنسوجات." data-en="We work across yarn trading, dyeing and manufacturing, offering options for textile applications.">نعمل في مجالات الخيوط والصباغة والتصنيع، ونوفر خيارات متنوعة تناسب استخدامات صناعة المنسوجات.</p></div><div class="cards"><article class="card"><img src="assets/polyester-cones.jpg" alt="خيوط بوليستر"><div class="card-body"><h3 data-ar="تجارة خيوط البوليستر" data-en="Polyester Yarn Trading">تجارة خيوط البوليستر</h3><p data-ar="خيوط بوليستر بألوان واستخدامات متنوعة لتلبية احتياجات المصانع وأعمال النسيج." data-en="Polyester yarn in a range of colors and applications for textile production.">خيوط بوليستر بألوان واستخدامات متنوعة لتلبية احتياجات المصانع وأعمال النسيج.</p></div></article><article class="card"><img src="assets/yarn-colors.jpg" alt="خيوط بوليستر مصبوغة"><div class="card-body"><h3 data-ar="صباغة خيوط البوليستر" data-en="Polyester Yarn Dyeing">صباغة خيوط البوليستر</h3><p data-ar="صباغة الخيوط بمجموعة من الألوان، مع الاهتمام بتناسق اللون ومظهر المنتج." data-en="Yarn dyeing in a variety of colors, with attention to color consistency and finish.">صباغة الخيوط بمجموعة من الألوان، مع الاهتمام بتناسق اللون ومظهر المنتج.</p></div></article><article class="card"><img src="assets/brand-promo.jpg" alt="منتجات وخدمات العراقي تكس"><div class="card-body"><h3 data-ar="صناعة الشانيليا" data-en="Chenille Yarn Manufacturing">صناعة الشانيليا</h3><p data-ar="منتجات الشانيليا ضمن أنشطة الشركة في مجال صناعة الخيوط والمنسوجات." data-en="Chenille products as part of our yarn and textile manufacturing activities.">منتجات الشانيليا ضمن أنشطة الشركة في مجال صناعة الخيوط والمنسوجات.</p></div></article></div></section>
 </main>
